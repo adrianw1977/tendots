@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Shortest Distance, Approximation</title>
+	<link href="./locations.css" rel="stylesheet" type="text/css">
+	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../../excanvas.min.js"></script><![endif]-->
+	<script language="javascript" type="text/javascript" src="./jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="./jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" data-Main="./Main" src="./Main.js"></script>
+	<script type="text/javascript">
+
+	$(function() {
+
+		// var d3 = [];
+		var coords = [
+				[6.4, 89.0],
+				[5.0, 51.1],
+				[2.0, 22.4],
+				[75.2, 19.7],
+				[92.3, 10.8],
+				[15.5, 20.3],
+				[8.3, 11.3],
+				[79.6, 66.3],
+				[5.6, 93.4],
+				[11.0, 2.8],
+			    ];
+		// for (var i = 0; i < 14; i += 0.5) {
+		// 	d3.push([i, Math.cos(i)]);
+		// }
+
+		// var d5 = [];
+
+
+		$.plot("#placeholder", [
+
+		{
+			data: coords,
+			points: { show: true }
+		},
+
+		// {
+		// 	data: d5,
+		// 	lines: { show: true },
+		// 	points: { show: true }
+		// },
+
+		]);
+
+		// Add the Flot version string to the footer
+
+		$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
+	});
+
+	</script>
+</head>
+<body>
+
+
+	<div id="header">
+		<h3>Shortest Distance Between 10 Points, an approximation method.</h3>
+	</div>
+
+	<div id="content">
+
+		<div class="demo-container">
+			<div id="placeholder" class="demo-placeholder"></div>
+		</div>
+
+		<p>No returns to previously visited point allowed.   Two path method from singular starting point used.</p>
+
+		<p id="demo1"></p>
+		<p id="insert"></p>
+		<p id="twopath"></p>
+		<p id="twopath2"></p>
+
+		<script data-main="./Main" src="./Main.js"></script>
+
+		<script>
+		document.getElementById("twopath2").innerHTML = coords;
+		</script>
+
+		<script>
+		document.getElementById("demo1").innerHTML = 5 + 6;
+		var x2 = 256;
+		document.getElementById("insert").innerHTML = x2;
+		var newest = 63;
+		document.getElementById("twopath").innerHTML = newest;
+		// var newest2 = Sum_Total;
+		document.getElementById("twopath2").innerHTML = Sum_Total;
+		</script>
+
+	</div>
+
+	<div id="footer2">
+		Footer.   Additional data can be inserted here.
+	</div>
+
+</body>
+</html>
